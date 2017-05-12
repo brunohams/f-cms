@@ -67,17 +67,26 @@
 
             $('#senha-atual, #senha-atual-confirmacao').on('change', function () {
 
-                var senhaAtual      = $('#senha-atual').val();
-                var senhaConfirma   = $('#senha-atual-confirmacao').val();
+                var senhaAtual      = $('#senha-atual');
+                var senhaConfirma   = $('#senha-atual-confirmacao');
 
                 /** Quando campos estiverem preenchidos */
-                if (senhaAtual != '' && senhaConfirma !== '')
+                if (senhaAtual.val() != '' && senhaConfirma.val() !== '')
                 {
 
-                    if (senhaAtual !== senhaConfirma)
+                    /** Verifica se são iguais */
+                    if (senhaAtual.val() !== senhaConfirma.val())
                     {
 
-                        alert('Senhas não coencidem');
+
+                        alert('As senhas não coencidem', 'Erro', 'error', function ()
+                        {
+
+                            senhaAtual.val('');
+                            senhaConfirma.val('');
+
+                        });
+
                         return false;
 
                     }

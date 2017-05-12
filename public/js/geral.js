@@ -1,6 +1,6 @@
 
 /** Sobrescreve a função do alert */
-function alert (prMensagem, prTitulo, prTipo)
+function alert (prMensagem, prTitulo, prTipo, prFunction)
 {
 
     if (prTitulo === undefined)
@@ -18,12 +18,20 @@ function alert (prMensagem, prTitulo, prTipo)
         prTipo = 'warning';
     }
 
+    if (prFunction === undefined)
+    {
+        prFunction = function () {};
+    }
+
     swal
     ({
         title: prTitulo,
         text: prMensagem,
         type: prTipo
-    });
+    }).then(function (e) {
+            prFunction(e)
+        }
+    );
 
 }
 
