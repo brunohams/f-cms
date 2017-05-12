@@ -10,6 +10,7 @@
     {
 
         protected $session = false;
+        protected $naoExibeMenu = false;
 
         public final function actionGetIndex ()
         {
@@ -39,6 +40,18 @@
             Mensagem::mensagem('Perfil alterado com sucesso!', 'alert-success');
 
             Redirect::to('perfil');
+
+        }
+
+        /** Exibe modal para alterar senha */
+        public final function actionGetModalAlteraSenha ()
+        {
+
+            $this->naoExibeMenu = true;
+
+            $this->view('user/partial/modal', array(
+                'modal' => true
+            ));
 
         }
 

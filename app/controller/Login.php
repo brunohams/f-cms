@@ -10,14 +10,12 @@
     {
 
         protected $session = false;
-        protected $exibeMenu = false;
+        protected $naoExibeMenu = true;
 
         public final function actionGetIndex ()
         {
 
-            $this->view('login/index', array(
-                'pagina'    =>  'login'
-            ));
+            $this->view('login/index');
 
         }
 

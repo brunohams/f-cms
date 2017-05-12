@@ -12,16 +12,22 @@
         <title>CMS</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{$caminho}}libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- MetisMenu CSS -->
-        <link href="libs/metisMenu/metisMenu.min.css" rel="stylesheet">
+        <link href="{{$caminho}}libs/metisMenu/metisMenu.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/sb-admin-2.css" rel="stylesheet">
+        <link href="{{$caminho}}css/sb-admin-2.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
-        <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="{{$caminho}}libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Fancybox -->
+        <link href="{{$caminho}}libs/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+
+        <!-- Sweet-alert2 -->
+        <link href="{{$caminho}}libs/sweet-alert2/sweetalert2.min.css" rel="stylesheet"/>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,16 +40,18 @@
 
     <body>
 
-    @if($_SESSION['mensagem'] && $pagina == 'login')
+    @if($_SESSION['mensagem'] && $exibeMenu)
 
         <div class="alert {{$_SESSION['mensagem']['tipo']}}">
+
             {{$_SESSION['mensagem']['mensagem']}}
+
         </div>
 
     @endif
 
     {{--Se for a página de login--}}
-    @if($pagina != 'login')
+    @if(!$exibeMenu)
 
         <div id="wrapper">
 
@@ -97,7 +105,9 @@
                 @if($_SESSION['mensagem'])
 
                     <div class="alert {{$_SESSION['mensagem']['tipo']}}">
+
                         {{$_SESSION['mensagem']['mensagem']}}
+
                     </div>
 
                 @endif

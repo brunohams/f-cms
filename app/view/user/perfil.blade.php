@@ -44,12 +44,13 @@
             </div>
 
             <div class="col-lg-12 col-md-12 text-center">
+
                 <button type="submit" class="btn btn-default">Salvar</button>
-                <button type="button" class="btn btn-default" onClick="alteraSenha();" >Alterar minha senha</button>
+                <button type="button" class="btn btn-default" data-fancybox data-fancybox-close data-src="perfil/modal-altera-senha" >Alterar minha senha</button>
+
             </div>
 
         </form>
-
 
     </div>
 

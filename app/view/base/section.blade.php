@@ -1,7 +1,7 @@
 @include('base/header')
 
 {{--Se for a página de login--}}
-@if($pagina != 'login')
+@if(!$exibeMenu)
 
     <div id="page-wrapper">
 

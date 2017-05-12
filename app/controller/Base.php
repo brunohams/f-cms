@@ -25,11 +25,33 @@
         public final function view ($prView,$prArray = array())
         {
 
-            /** Busca pelos menus */
+            /**
+             * Páginas que não exibem menu e barra
+             */
+            $aPagina = array('login', 'modal');
+
+            /** Verifica se o controller ja tem a informação */
+            $this->naoExibeMenu == 1 ? $prArray['exibeMenu'] = 1 : $prArray['exibeMenu'] = 0;
+
+            /** Verifica pela página */
+            if ($prArray['pagina'] && in_array($prArray['pagina'], $aPagina))
+            {
+                $prArray['exibeMenu'] = false;
+            }
+
+            /**
+             * Se vier do MODAL
+             */
+            $prArray['modal'] == true ? $prArray['caminho'] = '../' : $prArray['caminho'] = '';
+
+            /**
+             * Busca pelos menus
+             */
             $menu = DB::table('menu')
                 ->orderBy('ordem')
                 ->select()->get();
 
+            /** Varre os menus */
             foreach ($menu as $item)
             {
 
