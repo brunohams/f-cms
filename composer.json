@@ -1,0 +1,11 @@
+{
+    "name": "adrianobnu/parvus",
+    "description": "A small but strong framework",
+    "keywords": ["php", "framework", "mvc"],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "type": "project",
+    "require": {
+        "adrianobnu/parvus-framework": "dev-master"
+    }
+}
