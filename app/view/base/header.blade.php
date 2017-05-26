@@ -12,7 +12,7 @@
         <title>CMS</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="{{$caminho}}libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{$caminho}}libs/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- MetisMenu CSS -->
         <link href="{{$caminho}}libs/metisMenu/metisMenu.min.css" rel="stylesheet">

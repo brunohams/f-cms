@@ -2,9 +2,11 @@
         {{-- Fecha div --}}
         </div>
 
-
         <!-- jQuery -->
         <script type="text/javascript" src="{{$caminho}}libs/jquery/jquery.min.js"></script>
+
+        <!-- jQuery validator -->
+        <script type="text/javascript" src="{{$caminho}}libs/jquery-validator/jquery.validate.js"></script>
 
         <!-- Sweet alert 2 -->
         <script type="text/javascript" src="{{$caminho}}libs/sweet-alert2/sweetalert2.min.js"></script>
