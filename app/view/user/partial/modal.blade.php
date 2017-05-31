@@ -48,7 +48,7 @@
 
         </div>
 
-        <div class="confirm-modal text-center" style="padding: 50px">
+        <div class="confirm-modal text-center submit" style="padding: 50px">
 
             <button type="submit" class="btn btn-default">Continuar</button>
 

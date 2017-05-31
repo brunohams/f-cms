@@ -74,7 +74,7 @@
 
             </div>
 
-            <div class="col-lg-12 col-md-12 text-center">
+            <div class="col-lg-12 col-md-12 text-center submit">
 
                 <button type="submit" class="btn btn-default">Salvar</button>
                 <button type="button" class="btn btn-default" data-fancybox data-fancybox-close data-src="perfil/modal-altera-senha" >Alterar minha senha</button>

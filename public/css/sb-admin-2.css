@@ -139,6 +139,10 @@ body {
 .btn-danger.btn-outline:hover {
   color: white;
 }
+.submit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .chat {
   margin: 0;
   padding: 0;
